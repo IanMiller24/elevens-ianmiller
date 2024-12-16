@@ -184,7 +184,13 @@ public class ElevensBoard {
 	 *         false otherwise.
 	 */
 	public boolean isLegal(List<Integer> selectedCards) {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		if(selectedCards.size() == 3){
+			return containsJQK(selectedCards);
+		} else if (selectedCards.size() == 2){
+			return containsPairSum11(selectedCards);
+		} else {
+			return false;
+		}
 	}
 
 	/**
@@ -196,7 +202,9 @@ public class ElevensBoard {
 	 *         false otherwise.
 	 */
 	public boolean anotherPlayIsPossible() {
-		/* *** TO BE IMPLEMENTED IN ACTIVITY 9 *** */
+		ArrayList<Integer> selectedCards = cardIndexes();
+		// DOUBLE CHECK AHHHHHHHHHHHHHHHHHHHHHHHH
+		return containsJQK(selectedCards) || containsPairSum11(selectedCards);
 	}
 
 

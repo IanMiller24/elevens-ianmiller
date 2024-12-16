@@ -33,7 +33,7 @@ public class DeckTester {
 		System.out.println("Size of the deck: " + deck1.size());
 
 		// deal all the cards
-		for(int i = 0; i < deck1.size(); i++){
+		for(int i = deck1.size(); i >= 0; i--){
 			System.out.println("Dealt: " + deck1.deal());
 		}
 
