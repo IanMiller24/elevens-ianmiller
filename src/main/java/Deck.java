@@ -62,13 +62,13 @@ public class Deck {
 	 */
 	public void shuffle() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 4 *** */
-		size = cards.size();
 		for(int k = size - 1; k > 0; k--){	
 			int rand = (int) (Math.random() * (k + 1));
 			Card temp = cards.get(k);
 			cards.set(k, cards.get(rand));
 			cards.set(rand, temp);
 		}
+		size = cards.size();
 	}
 
 	/**
